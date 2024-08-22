@@ -236,6 +236,7 @@ function startNewGame() {
         maxTries = word.length;
         currentTries = 0;
         clueUses = (word.length >= 7) ? 2 : 1; // Ajuster le nombre d'indices en fonction de la longueur du mot
+        resetTries();
         updateTries();
         setupLetterInputs();
         updateClueButton(); // Mettre à jour le bouton d'indice
