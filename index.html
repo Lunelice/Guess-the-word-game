@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the word game</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+<body>
+    <div class="language-selector">
+        <button class="btn lang" data-lang="en">English</button>
+        <button class="btn lang" data-lang="fr">Français</button>
+    </div>
+    
+        <div class="card">
+            <img src="assets/img/Word Scramblle.svg" alt="Le logo du jeu : word scramblle" class="logo">
+            <div class="scrambled"></div>
+            <div class="game-status">
+                <p class="tries"></p>
+                <ul class="dots">
+                    
+                </ul>
+                <p class="letters-tried">Mistakes: <span class="mistakes"></span></p>
+            </div>
+            <div class="letters-available">
+              
+
+            </div>
+            <div class="buttons">
+                <button class="btn random"></button>
+                <button class="clue btn"></button>
+                <button class="btn reset"></button>
+            </div>
+        </div>
+
+    
+    <script src="script/script.js"></script>
+</body>
+
+</html>

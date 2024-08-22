@@ -1,0 +1,185 @@
+/* ==== GENERAL ==== */
+
+:root {
+    --violet: #7429c6;
+    --pink: #c951e7;
+    --purple: #672171;
+    --darkGray: #4a5567;
+    --gray: #97a3b6;
+    --black: #030616;
+    --dark: #1f2839;
+    --white: #f2f5f9;
+}
+
+header {
+    width: 90dvw;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    margin: 1em auto;
+}
+
+.lang {
+    background-color: var(--violet) !important;
+    margin: 1em 0.5em;
+}
+
+body {
+    background-color: var(--violet);
+    background-image: url("../assets/img/bg-guess-the-word.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Outfit;
+    color: var(--darkGray);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+/* ==== CARD ==== */
+
+.card {
+    max-width: 50%;
+    min-width: 25%;
+    height: fit-content;
+    background: linear-gradient(150deg, var(--black), var(--dark));
+    border-radius: 10px;
+    margin: auto;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin: 1em auto;
+}
+
+.scrambled {
+    max-width: 90%;
+    text-align: center;
+    background-color: var(--darkGray);
+    padding: 0.4em 1em;
+    border-radius: 5px;
+    color: var(--gray);
+    letter-spacing: 20px;
+    text-transform: lowercase;
+    text-indent: 20px;
+}
+
+.game-status {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    font-size: 0.75rem;
+}
+
+.mistakes {
+    color: var(--gray);
+    font-size: 1.25rem;
+    align-self: center;
+}
+
+.dots {
+    list-style-type: none; /* Enlève les puces de la liste */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Affiche les éléments en ligne */
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%; /* Rend les éléments ronds */
+    background-color: var(--darkGray); /* Couleur par défaut des points */
+    margin-right: 5px; /* Espace entre les points */
+}
+
+.dot.active {
+    background-color: var(--violet); /* Couleur des points actifs */
+}
+
+.letters-available {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em auto;
+    width: 80%;
+}
+
+.letter {
+    text-transform: lowercase;
+    color: var(--white);
+    background-color: transparent;
+    font-size: 1.25rem;
+    border: 2px solid var(--darkGray);
+    width: 40px;
+    height: 40px;
+    margin: 0.2em;
+    border-radius: 10px;
+    padding: auto;
+    text-align: center;
+    align-content: center;
+}
+
+.current {
+    border: 2px solid var(--purple);
+    background-color: transparent;
+}
+.current:q {
+    border: 2px solid var(--purple);
+}
+/* ==== BUTTONS ==== */
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.btn {
+    color: var(--white);
+    font-size: 0.875rem;
+    background-color: var(--pink);
+    border: none;
+    border-bottom: 5px solid var(--purple);
+    border-radius: 12px;
+    padding: 0.75em 2em;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+/* ==== MEDIA QUERIES ==== */
+@media screen and (max-width: 1024px) {
+    .card {
+        max-width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .card {
+        max-width: 80%;
+        max-height: 100%;
+        margin: .5em
+    }
+
+    .buttons{
+        flex-direction: column;
+    }
+    .scrambled{
+        max-width: 100%;
+        font-size: 1rem;
+      
+        padding: .5em;
+       overflow-x: auto;
+      
+    }
+}
